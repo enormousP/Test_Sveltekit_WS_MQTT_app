@@ -11,7 +11,7 @@ const app = express();
 app.use(handler);
 
 const server = http.createServer(app);
-const port = +process.env.PUBLIC_SERVER_PORT! || 4000;
+const port = +process.env.PORT! || 4000;
 
 const client = mqtt.connect('mqtt://test.mosquitto.org');
 const topic = process.env.PUBLIC_MQTT_TOPIC!;
